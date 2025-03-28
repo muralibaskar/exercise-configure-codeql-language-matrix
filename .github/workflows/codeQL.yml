@@ -5,15 +5,13 @@ on:
     branches: [main]
 
 jobs:
-  analyze:
-   name: Analyze
+  CodeQL-Build:
+    runs-on: ubuntu-latest
+    name: Build
     strategy:
       fail-fast: false
       matrix:
         language: ['javascript']
-        
-  CodeQL-Build:
-    runs-on: ubuntu-latest
 
     permissions:
       # required for all workflows
